@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+
+{% block header %}
+	{% if title %}	
+	<h2>{{ title }} - Cognia Application</h2>
+
+	{% else %}
+	<h2>Welcome to Cognia Application</h2>
+
+	{% endif %}
+{% endblock %}
+
+{% block content %}
+	<p>Some random information about which options there are</p>
+
+	<div>
+		<span>Update Rest Area information</span>
+		<a href="/updateRestAreas"><button type="button">Update Rest Area</button></a>
+	</div>
+
+	<div>
+		<span>Update Parking information</span>
+		<a href="/updateParking"> <button type="button">Update Parking</button> </a>
+	</div>
+
+
+{% endblock %}

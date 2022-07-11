@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<title>{% block title %} {% endblock %}</title>
+<link rel='stylesheet' href="{{ url_for('static', filename='style.css') }}">
+
+<div class="topnav">
+	<h1>Cognia application</h1>
+	<a href="/">Home</a>
+	<a href="/restAreaWater">Rasteplasser med drikkevann/a>
+	<a href="/restAreaShower">Rasteplasser med dusj</a>
+	<a href="/restAreaElecticity">Rasteplasser med strøm</a>	
+</div>
+
+<section class='content'>
+	<header>
+		{% block header %} {% endblock %}
+	</header>
+
+	{% block content %} {% endblock %}
+</section>

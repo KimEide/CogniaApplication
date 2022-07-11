@@ -1,0 +1,30 @@
+Hvilke data om en bruker ville du logget og hvorfor?
+    Når på døgnet brukeren bruker applikasjonen, og i hvilke områder ville blitt logga for å kunne finne et brukermønster å kunne 
+    anbefale en rasteplass basert på hvor den er.
+
+    Det å logge hvor noe skal leveres eller et endepunkt for å kunne anfale parkeringsplasser i nærheten. 
+
+    Noe annet som kunne logges er hvor lenge det er siden forgje pause, og finne en egnet rasteplass for å ha hviletiden på, basert på hvor lang den hviletiden er. 
+    Hvis det skal være døgnhvile så kunne anbefale en rasteplass som har flere tilbud som dusj og strøm for å kunne lade en PC, mens en halvtimes hvile trengs det ikke like
+    mange tilbud.  
+
+    Finne en API fra vegvesenet på stengte veier, og gi et varsel hvis en vei som er planlagt å kjøres på er stengt. På denne måten kan hvile bedre planlegges hvis veien er 
+    stengt over lengre tid, men for kort tid til å benytte en omkjøringsvei. Hvis en omkjøringsvei er tilgjenglig så kan den bli foreslått i stedet. 
+
+Lag et design utkast/konsept du ville benyttet for å logge brukeraktivitet i en mikrotjenestearkitektur?
+    Når applikasjonen er åpen og blir brukt, så blir bruksmønster logget, og lagret i en lokal database. Når enheten deretter blir tilkoblet internett så synkroniseres
+    dataen med en sentralisert database, så dataen blir tilgjenglig foor å kunne analyseres.
+
+
+For å kunne utføre fremtidige analyse av brukeraktivitet, hva kan være viktig i strukturering og lagring av dataene?
+    Hvis applikasjonen er basert på en telefon eller nettbrett, så må dataen sendes til en cloud database når internett er tilgjengelig, for å sørge for at dataen faktisk er
+    tilgjengelig til å gjøre analyse på. Dataene må også være strukturert på en måte som gjør at det er lett å få tak i det som skal analyseres lettere. Dette kan bli oppnådd
+    ved å ha flere tabeller som holder forskjellig type data og er linket sammen med primary/foreign keys for å kunne ha tilgang til all data som er lagret om nødvendig. 
+
+
+Ta utgangspunkt i APIet i oppgave 1 og reflekter rundt hvordan du vil logge bruken av APIer, spesielt med fokus på ulike feilmeldinger som kan oppstå med å bruke eksterne 
+integrasjonspunkter, enten knyttet til f.eks. feil brukerpålogginger, timeouts, manglende data, etc. Stikkord er; hvordan vil du håndtere loggdata, systemkomponenter og 
+ansvar i ett løsningsdesign og automatisering av varsling ved feil.
+
+    Ved bruk av APIer, der gjerne data hentes fra en ekstern plass, eller det er eksterne komponenter som blir brukt til applikasjonen så det å logge hvis en tjeneste ikke 
+    er tilgjengelig eller all dataen ikke er strukturert på samme måte så sørge for å ta vare på feilmeldinger som kommer for å lettere kunne feilsøke og rette opp. 
